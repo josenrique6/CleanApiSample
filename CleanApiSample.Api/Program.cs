@@ -1,6 +1,9 @@
 using CleanApiSample.Application.Features.Products;
 using CleanApiSample.Application.Features.Products.Commands;
 using CleanApiSample.Application.Features.Products.Queries;
+using CleanApiSample.Application.Features.Invoices;
+using CleanApiSample.Application.Features.Invoices.Commands;
+using CleanApiSample.Application.Features.Invoices.Queries;
 using CleanApiSample.Infraestructure;
 using Microsoft.OpenApi.Models;
 
@@ -16,6 +19,11 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AddPr
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetProductsByIdQuery).Assembly));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(DeleteProductCommand).Assembly));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(UpdateProductoCommand).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetInvoicesQuery).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AddInvoiceCommand).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetInvoicesByIdQuery).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(DeleteInvoiceCommand).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(UpdateInvoiceCommand).Assembly));
 #endregion
 
 builder.Services.AddControllers();

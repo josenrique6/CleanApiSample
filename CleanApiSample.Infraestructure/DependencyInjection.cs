@@ -19,6 +19,7 @@ namespace CleanApiSample.Infraestructure
             var conn = config.GetConnectionString("DefaultConnection") ?? "Data Source=app.db";
             services.AddDbContext<AppDbContext>(option => option.UseSqlite(conn));
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IInvoiceRepository, InvoiceRepository>();
             return services;
         }
     }
