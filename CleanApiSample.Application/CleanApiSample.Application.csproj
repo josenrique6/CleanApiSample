@@ -14,4 +14,8 @@
     <ProjectReference Include="..\CleanApiSample.Domain\CleanApiSample.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Products\Commands\AddProduct\" />
+  </ItemGroup>
+
 </Project>
