@@ -6,12 +6,14 @@ using CleanApiSample.Application.Features.Products;
 using CleanApiSample.Application.Features.Products.Commands;
 using CleanApiSample.Application.Features.Products.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanApiSample.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class InvoiceController : ControllerBase
     {
         private readonly IMediator _mediator;
